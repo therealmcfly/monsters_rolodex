@@ -1,7 +1,7 @@
 import CategoryItem from "../CategoryItem/CategoryItem";
-import "./CategoryList.scss";
+import "./CategoryDir.scss";
 
-const CategoryList = ({ list }) => {
+const CategoryDir = ({ list }) => {
   return (
     <div className="category-list">
       {list.map((item) => {
@@ -12,4 +12,4 @@ const CategoryList = ({ list }) => {
   );
 };
 
-export default CategoryList;
+export default CategoryDir;

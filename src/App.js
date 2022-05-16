@@ -1,4 +1,4 @@
-import CategoryList from "./components/CategoryList/CategoryList";
+import CategoryDir from "./components/CategoryDir/CategoryDir";
 
 const shopCategoryList = [
   {
@@ -30,7 +30,7 @@ const shopCategoryList = [
 const App = () => {
   return (
     <>
-      <CategoryList className="catagory-list" list={shopCategoryList} />;
+      <CategoryDir className="catagory-list" list={shopCategoryList} />;
     </>
   );
 };
