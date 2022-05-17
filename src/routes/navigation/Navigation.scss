@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "LeferiPoint-WhiteA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nav-bar {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  padding: 0px 30px;
+  vertical-align: center;
+  line-height: 70px;
+
+  .logo-container {
+    height: 100%;
+    width: 50%;
+    vertical-align: center;
+  }
+
+  .logo-container h1 {
+    font-family: "LeferiPoint-WhiteA";
+    color: black;
+    font-size: 30px;
+    vertical-align: center;
+  }
+
+  .nav-links-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    vertical-align: center;
+
+    .nav-link {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,7 +1,6 @@
 import "./CategoryItem.scss";
 
 const CategoryItem = ({ title, imgUrl }) => {
-  console.log(imgUrl);
   return (
     <div className="category-item">
       <div
