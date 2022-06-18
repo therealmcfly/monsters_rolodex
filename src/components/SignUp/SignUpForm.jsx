@@ -6,7 +6,7 @@ import {
 import Button from "../Button/Button";
 import FormInput from "../FormInput/FormInput";
 
-import "./SignUpFrom.scss";
+import "./SignUpForm.scss";
 
 const INITIAL_FORM_VALUES = {
   displayName: "",
@@ -15,7 +15,7 @@ const INITIAL_FORM_VALUES = {
   confirmPassword: "",
 };
 
-const SignUpFrom = () => {
+const SignUpForm = () => {
   const [signUpFormValues, setSignUpFormValues] = useState(INITIAL_FORM_VALUES);
   const [submitIsLoading, setSubmitIsLoading] = useState(false);
   const { displayName, email, password, confirmPassword } = signUpFormValues;
@@ -57,7 +57,7 @@ const SignUpFrom = () => {
   return (
     <div className="sign-up-container">
       <h2>Don't have an account?</h2>
-      <span>Sign up with email and password</span>
+      <span>Sign up with your email and password</span>
       <form onSubmit={handleSignUpFormSubmit}>
         <FormInput
           label="Display Name"
@@ -99,4 +99,4 @@ const SignUpFrom = () => {
   );
 };
 
-export default SignUpFrom;
+export default SignUpForm;

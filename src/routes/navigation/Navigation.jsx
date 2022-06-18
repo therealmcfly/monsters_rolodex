@@ -11,7 +11,7 @@ const Navigation = () => {
           <h1>SURF ANGEL</h1>
         </Link>
         <div className="nav-links-container">
-          <Link className="nav-link" to="/signin">
+          <Link className="nav-link" to="/auth">
             SIGN IN
           </Link>
         </div>
