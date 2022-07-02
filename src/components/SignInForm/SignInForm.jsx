@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+
+import Button from "../Button/Button";
+import FormInput from "../FormInput/FormInput";
+
+import { UserContext } from "../../contexts/UserContext";
+
 import {
   signInAuthUserWithEmail,
   signInWithGooglePopup,
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase";
-import Button from "../Button/Button";
-import FormInput from "../FormInput/FormInput";
+
 import "./SignInForm.scss";
 
 const INITIAL_SIGN_IN_FORM_VALUES = {
@@ -20,6 +25,8 @@ const SignInForm = () => {
   const [signInSubmitIsLoading, setSignInSubmitIsLoading] = useState(false);
   const { email, password } = signInFormValues;
 
+  const { setCurrentUser } = useContext(UserContext);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -31,7 +38,11 @@ const SignInForm = () => {
 
     try {
       setSignInSubmitIsLoading(true);
-      const response = await signInAuthUserWithEmail(email, password);
+      const { user } = await signInAuthUserWithEmail(email, password);
+      console.log(user);
+
+      setCurrentUser(user);
+
       setSignInFormValues(INITIAL_SIGN_IN_FORM_VALUES);
     } catch (error) {
       switch (error.code) {
